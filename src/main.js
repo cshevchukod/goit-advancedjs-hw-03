@@ -42,13 +42,11 @@ function handleSubmit(event) {
 
       createGallery(data.hits);
     })
-    .catch(error => {
+    .catch(() => {
       iziToast.error({
         message: 'Something went wrong. Please try again later.',
         position: 'topRight',
       });
-
-      console.error(error);
     })
     .finally(() => {
       hideLoader();
